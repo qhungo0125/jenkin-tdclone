@@ -37,9 +37,9 @@ pipeline {
                         """
 
                         // Deployment commands
+                        // echo "Azurevm@20120298" | sudo -S rm -r jenkin-tdclone
                         sh """
                         ssh -t -t azureuser@20.6.10.42
-                        echo "Azurevm@20120298" | sudo -S rm -r jenkin-tdclone
                         git clone https://github.com/qhungo0125/jenkin-tdclone.git
                         cd jenkin-tdclone/express_service && sudo docker-compose up -d 
                         """
