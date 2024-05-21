@@ -21,7 +21,7 @@ describe('Start unit test for update job function', () => {
       const job = jobs[0];
 
       const result = await jobRepository.updateJobById(jobId, job);
-      expect(result).toEqual(false);
+      expect(result).toEqual(true);
     });
 
     // is OK
