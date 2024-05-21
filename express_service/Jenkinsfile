@@ -40,7 +40,7 @@ pipeline {
                         sh """
                         ssh azureuser@20.6.10.42
                         git clone https://github.com/qhungo0125/jenkin-tdclone.git
-                        cd ~/jenkin-tdclone/express_service && sudo docker-compose up -d 
+                        ls && cd ~/jenkin-tdclone/express_service && sudo docker-compose up -d 
                         """
                     }
                 }
