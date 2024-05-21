@@ -7,7 +7,7 @@ const StartSubscriber = require('../utils/pubsub_rabbitmq/jobs/sub');
 // const grpcJobServer = require('../grpc-server');
 // const { GRPC_JOB_SERVER } = require('../configs');
 
-const createServer = async () => {
+const createServer = () => {
   const app = express();
 
   app.use(express.json({ limit: '1mb' }));

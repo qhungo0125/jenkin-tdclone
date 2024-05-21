@@ -7,14 +7,14 @@ describe('Start unit test for update job API', () => {
   let app;
   let server;
 
-  beforeAll(async () => {
-    await sequelize.authenticate();
-    app = await createServer();
+  beforeAll(() => {
+    sequelize.authenticate();
+    app = createServer();
     server = app.listen(5002); // Ensure the server is listening on a port
   });
 
-  afterAll(async () => {
-    await sequelize.close();
+  afterAll(() => {
+    sequelize.close();
     server.close(); // Close the server after tests
   });
 
