@@ -23,7 +23,7 @@ pipeline {
                     sh 'npm i'
                     sh 'npm i mongoose'
                     sh 'cp .env.example .env'
-                    sh 'npm test'
+                    sh 'npm test -- --detectOpenHandles'
                   }
                 }
             }
